@@ -1,6 +1,6 @@
 <template>
   <div
-    class="user theme-5"
+    class="user"
     :style="{
       height: vh + 'px',
     }"

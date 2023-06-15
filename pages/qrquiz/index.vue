@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="wrap theme-5">
     <div
       v-if="isLoading"
       class="centered"
@@ -63,4 +63,66 @@ onMounted(() => {
     font-size: 14px
     font-weight: 500
     text-transform: uppercase
+</style>
+
+<style lang="sass">
+.theme-1
+  @import ~/assets/sass/games/qr/var-qr1
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-2
+  @import ~/assets/sass/games/qr/var-qr2
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-3
+  @import ~/assets/sass/games/qr/var-qr3
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-4
+  @import ~/assets/sass/games/qr/var-qr4
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-5
+  @import ~/assets/sass/games/qr/var-qr5
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-6
+  @import ~/assets/sass/games/qr/var-qr6
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-7, .theme-11
+  @import ~/assets/sass/games/qr/var-qr7
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-8
+  @import ~/assets/sass/games/qr/var-qr8
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-9
+  @import ~/assets/sass/games/qr/var-qr9
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
+
+.theme-10
+  @import ~/assets/sass/games/qr/var-qr10
+
+  @each $name, $color in $tmc
+    --tm-#{$name}: #{$color}
 </style>
