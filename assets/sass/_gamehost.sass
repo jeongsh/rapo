@@ -1,0 +1,338 @@
+// variables
+$blue: #2D73F8
+$red: #D20C20
+$orange: #E24949
+$pink: #FF8B8B
+$green: #0E9C7B
+//
+$table-grid: 0.5fr 1fr 240px 1.5fr 1fr 1.5fr 2fr
+$result-table-grid: 0.5fr 0.8fr 1fr 1fr 1fr 1fr 1fr 0.8fr
+
+// popup
+.popup
+  background-color: #00000054
+
+  &__box
+    width: 546px
+  &__body
+    padding: 60px 48px
+    background-color: $white
+
+  &__title,
+  .lead
+    margin: 0 0 16px
+    font-size: 28px
+    font-weight: 600
+    line-height: 33px
+  .box
+    margin: 16px 0
+    padding: 24px
+    border-radius: 8px
+    font-size: 18px
+    font-weight: 300
+    line-height: 24px
+    background-color: #F8F8F8
+  .btns
+    margin-top: 30px
+  .btn
+    width: 140px
+    padding: 8px 16px
+    color: $white
+    border-radius: 8px
+    font-weight: 500
+    font-size: 16px
+    line-height: 24px
+
+    + .btn
+      margin-left: 7px
+
+    &-cancel
+      background-color: #787878
+    &-ok
+      background-color: $red
+
+// card
+.card
+  border-width: 0
+
+  &-header
+    padding: 16px 24px
+    border: 1px solid #DDDDDD
+    border-radius: 8px 8px 0 0
+    background-color: $white
+  &-body
+    padding: 16px 24px
+    border: 1px solid #DDDDDD
+    border-top-width: 0
+    border-radius: 0 0 8px 8px
+    background-color: $white
+  &-title
+    margin: 0
+    font-size: 16px
+    font-weight: 500
+    line-height: 19px
+
+  &-table
+    border: 1px solid #DDDDDD
+    border-radius: 8px
+    background-color: #F8F8F8
+
+    .card-header
+      margin: -1px
+      padding: 16px 24px
+      border-radius: 8px
+      background-color: $white
+      box-shadow: 0px 3px 6px #0000001A
+
+    .card-body
+      border-width: 0
+      background-color: $tran
+      transition: margin 0.3s
+
+// dashboard
+.section
+  &-info
+    position: relative
+    display: flex
+    margin-top: 25px
+    flex-direction: row
+    justify-content: space-between
+
+    .user
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      padding-left: 20px
+      padding-right: 20px
+
+      .item + .item
+        margin-left: 24px
+    .time
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      margin: 0 auto
+      min-width: 287px
+      width: fit-content
+      white-space: nowrap
+
+      .num
+        font-size: 18px
+    .num
+      line-height: 24px
+    .btn
+      width: 192px
+      height: 40px
+      padding: 8px 16px
+      color: $white
+      border-width: 0
+      border-radius: 4px
+      font-size: 16px
+      line-height: 24px
+      box-shadow: 0px 3px 6px #00000029
+
+      &-red
+        background-color: #D20C20
+      &-black
+        background-color: #333333
+  // / section-info
+
+  .box-cap
+    height: 38px
+    padding: 7px 32px
+    border-radius: 19px
+    background-color: $white
+    box-shadow: 0px 3px 6px #0000001A
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+
+    &-label
+      display: block
+      float: left
+      margin: -7px 20px 0 -32px
+      padding: 7px 32px
+      width: 150px
+      height: 38px
+      color: $white
+      border-radius: 19px
+      text-align: center
+      background-color: var(--tm-primary)
+
+    .icon
+      display: inline-block
+      font-size: 23px
+      color: #999999
+      margin-right: 6px
+      vertical-align: -2px
+
+      // &-eye-fill
+  // / box-cap
+// / section
+.player-info
+  width: 100%
+  margin-bottom: 50px
+  border-collapse: collapse
+  // background-color: $white
+  // border-radius: 8px
+  text-align: center
+  // overflow: hidden
+
+  thead
+    text-align: center
+    border-bottom: 1px solid #ddd
+
+    th
+      padding: 24px 16px
+      background-color: $white
+      font-weight: 500
+      line-height: 20px
+
+
+      &:first-child
+        border-top-left-radius: 8px
+      &:last-child
+        border-top-right-radius: 8px
+  tbody
+    tr
+      &:nth-child(even)
+        td
+          background-color: #fafafa
+
+      &:nth-child(5n + 2)
+        .btn.team
+          background-color: #B791FF
+      &:nth-child(5n + 3)
+        .btn.team
+          background-color: #FC838B
+      &:nth-child(5n + 4)
+        .btn.team
+          background-color: #FFBA1F
+      &:nth-child(5)
+        .btn.team
+          background-color: #0DC5A5
+      &:last-child
+        td
+          &:first-child
+            border-bottom-left-radius: 8px
+          &:last-child
+            border-bottom-right-radius: 8px
+
+    td
+      padding: 16px
+      font-size: 16px
+      font-weight: 500
+      line-height: 20px
+      background-color: $white
+  caption
+    display: none
+
+  .dropdown
+    &-menu
+      margin-top: 14px
+      margin-left: -16px
+    &-item
+      display: flex
+      min-width: 205px
+      padding: 10px 20px
+      color: #666
+      font-size: 14px
+      line-height: 16px
+      justify-content: space-between
+
+      &:hover
+        color: unset
+        background-color: unset
+
+      .count
+        color: #999
+        font-weight: 300
+      .grade
+        width: 44px
+        margin-left: 8px
+        padding: 1px 5px
+        float: right
+        border-radius: 4px
+        font-size: 13px
+        line-height: 15px
+        background-color: #ECECEC
+        display: flex
+        align-items: center
+        height: 18px
+        &-intruder
+          background: #fff
+          border: 1px solid #DBDBDB
+        .leader, .member
+          width: 32px
+          display: flex
+          justify-content: space-between
+
+      &.boss
+        background-color: #EFFDFF
+        .grade
+          background-color: #C5EDFF
+  // / dropdown
+  .help
+    color: #999999
+    font-size: 14px
+    font-weight: 300
+    line-height: 16px
+  .btn
+    margin: 0 4px
+    padding: 10px
+    min-width: 86px
+    color: $white
+    border-radius: 4px
+    font-size: 15px
+    font-weight: 500
+    line-height: 18px
+    background-color: #0E9C7B
+
+    &.team
+      padding: 9px
+      width: 74px
+      min-width: 0
+      color: $white
+      border-width: 0
+      background-color: #52C0FF
+      font-size: 18px
+      line-height: 22px
+
+// utils
+.text
+  &-blue
+    color: $blue
+  &-red
+    color: $red
+  &-green
+    color: $green
+  &-orange
+    color: $orange
+  &-bar
+    margin: 0 3px
+    color: #999999
+    font-weight: 300
+
+// theme
+// ===========================
+.theme-2
+  section .box-cap-label
+    background-color: #22416C
+
+.theme-3
+  section .box-cap-label
+    background-color: #9A3FE1
+
+@media (max-width: 992px)
+  .player-info
+    thead th
+      padding: 16px 8px
+    tbody td
+      padding: 16px 8px
+    .btn.team
+      width: 36px
+      height: 36px
+    .help
+      display: none

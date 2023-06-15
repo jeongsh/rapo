@@ -1,0 +1,25 @@
+.v-toast
+  padding: 8px !important
+
+  .v-toast
+    &__item
+      position: relative
+      border-radius: 32px
+
+      &:after
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath fill='none' d='M0 0h20v20H0z'/%3E%3Cpath d='M4.236 15.5a.818.818 0 00.374.209.849.849 0 00.421 0 .769.769 0 00.362-.2l4.479-4.479 4.476 4.472a.771.771 0 00.364.207.872.872 0 00.422 0 .751.751 0 00.369-.212.767.767 0 00.207-.366.881.881 0 000-.42.759.759 0 00-.2-.364l-4.477-4.483 4.476-4.472a.781.781 0 00.206-.364.831.831 0 000-.419.789.789 0 00-.21-.366.783.783 0 00-.372-.213.879.879 0 00-.419 0 .738.738 0 00-.364.209L9.873 8.715 5.394 4.238a.732.732 0 00-.365-.207.911.911 0 00-.424 0 .738.738 0 00-.368.212.762.762 0 00-.2.367.9.9 0 000 .421.744.744 0 00.2.361l4.479 4.477-4.484 4.482a.77.77 0 00-.2.36.862.862 0 000 .421.747.747 0 00.204.368z' fill='%23c9c9c9'/%3E%3C/svg%3E")
+        position: absolute
+        top: 22px
+        right: 8px
+
+      &--default
+        @include glass-thick
+        border: 1px solid #FFFFFFD6
+        box-shadow: inset 0px 8px 24px #FFFFFF9D, 0px 8px 16px #00000029
+    &__text
+      padding: 22px 44px
+      color: $text
+      font-size: 17px
+      font-weight: 500
+      line-height: 20px
+      letter-spacing: -0.5px

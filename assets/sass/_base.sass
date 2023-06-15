@@ -1,0 +1,71 @@
+html
+  scroll-behavior: smooth
+
+body
+  position: relative
+  // min-height: 100%
+  word-break: keep-all
+  color: $text
+
+svg
+  fill: currentColor
+
+img
+  max-width: 100%
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+// TODO: will remove
+// :root
+//   @each $no, $color in $tq1
+//     --theme-#{$no}: #{$color}
+
+:root
+  --tm-primary: #{$tm-primary}
+  --tm-btn-border: #{$tm-btn-border}
+  --tm-btn-bg: #{$tm-btn-bg}
+  --tm-btn-text: #{$tm-btn-text}
+  --tm-btn-shadow: #{$tm-btn-shadow}
+  --tm-box-border: #{$tm-box-border}
+  --tm-box-bg: #{$tm-box-bg}
+  --tm-input-text: #{$tm-input-text}
+  --tm-input-border: #{$tm-input-border}
+  --tm-input-bg: #{$tm-input-bg}
+  --tm-radio-border: #{$tm-radio-border}
+  --tm-radio-gr1: #{$tm-radio-gr1}
+  --tm-radio-gr2: #{$tm-radio-gr2}
+  @each $key, $color in $baseball-team-colors
+    --team-color-#{$key} : #{$color}
+  @each $key, $color in $baseball-progress-colors
+    --team-progress-color-#{$key} : #{$color}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+  margin: 0
+  padding: 0
+
+.host
+  a, button
+    color: #000
+html, body
+  margin: 0
+  padding: 0
+
+*
+  box-sizing: border-box 
+  font-family: 'pretendard'
+
+button, a
+  cursor: pointer
+@media (min-width: 541px) and (max-width: 992px)
+  html
+    font-size: 24px
+  p, div
+    font-size: 16px

@@ -1,0 +1,66 @@
+.spinner
+  display: inline-block
+  position: relative
+  width: 80px
+  height: 80px
+  &-item
+    transform-origin: 40px 40px
+
+    &::after
+      content: " "
+      display: block
+      position: absolute
+      top: 3px
+      left: 35px
+      width: 10px
+      height: 22px
+      border-radius: 30px
+      background: #4CB9FF
+      animation: spinner 1.2s linear infinite
+
+    &:nth-child(1)
+      transform: rotate(0deg)
+      &::after
+        animation-delay: -1.05s
+
+    &:nth-child(2)
+      transform: rotate(45deg)
+      &::after
+        animation-delay: -0.9s
+
+    &:nth-child(3)
+      transform: rotate(90deg)
+      &::after
+        animation-delay: -0.75s
+
+    &:nth-child(4)
+      transform: rotate(135deg)
+      &::after
+        animation-delay: -0.6s
+
+    &:nth-child(5)
+      transform: rotate(180deg)
+      &::after
+        animation-delay: -0.45s
+
+    &:nth-child(6)
+      transform: rotate(225deg)
+      &::after
+        animation-delay: -0.3s
+
+    &:nth-child(7)
+      transform: rotate(270deg)
+      &::after
+        animation-delay: -0.15s
+
+    &:nth-child(8)
+      transform: rotate(315deg)
+      &::after
+        animation-delay: 0s
+
+@keyframes spinner
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0

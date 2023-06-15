@@ -1,0 +1,110 @@
+$primary: #2D73F8
+button
+  padding: 0
+  margin: 0
+  outline: none
+  border: none
+.modal
+  background: rgba(0,0,0,0.68)
+  position: fixed
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 9900
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  line-height: 1.35
+  letter-spacing: -0.8px
+  &-container
+    background: #fff
+    border-radius: 16px
+    padding: 56px 24px
+    width: calc(100vw - 2rem)
+    max-width: 540px
+  &-title
+    font-size: 32px
+    font-weight: 700
+    color: $text
+    margin-bottom: 8px
+  &-subtitle
+    font-size: 22px
+    font-weight: 600
+    color: $gray-5
+    margin-bottom: 32px
+  &-content
+    font-size: 22px
+    color: $text
+    font-weight: 700
+  &-btn
+    width: 100%
+    height: 56px
+    background: $text
+    color: #fff
+    border-radius: 56px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 48px
+
+.result-table
+  font-size: 20px
+  font-weight: 500
+  width: 100%
+  position: relative
+  z-index: 10
+  .table
+    &-head
+      background: #637CBF
+      color: #fff
+      .rank
+        padding-left: 18px
+      .progress
+        margin-right: 8px
+    &-row
+      height: 52px
+      margin: 0 16px
+      display: flex
+      align-items: center
+    &-body
+      overflow-y: auto
+      height: calc(100% - 102px)
+      padding-left: 0
+      margin-top: 10px
+      .progress
+        padding-left: 18px
+        span
+          width: 50px
+          text-align: center
+          display: block
+          color: #2D73F8
+  .rank
+    width: 98px
+  .team
+    width: 74px
+    display: flex
+    align-items: center
+  .progress
+    width: 92px
+    margin-left: auto
+
+  .myteam
+    background: #F8F8F8
+    border-radius: 8px
+    .team
+      color: #7966FF
+    .badge
+      color: #fff
+      background: #7966FF
+      border-radius: 4px
+      width: 50px
+      height: 20px
+      margin-left: 12px
+      padding: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 14px
+      font-weight: 500
