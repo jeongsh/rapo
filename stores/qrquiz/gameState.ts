@@ -1,16 +1,18 @@
 import {
   defineStore,
 } from 'pinia'
-type gameState = 'opening' | 'playing' | 'complete' | 'end'
+type gameState = 'opening' | 'playing' | 'complete' | 'loading'
 
 export const useStateStore = defineStore('gameState', () => {
   const gameState = ref<gameState>('opening')
   const progress = ref(0)
   const wholeQuizCount = ref(5)
+  const wholeBossQuizCount = ref(3)
   const solvedNormalQuizCount = ref(0)
   const earnedBossHintCount = ref(0)
   const usedBossHintCount = ref(0)
   const currentQuizNo = ref(0)
+  const currentBossQuizNo = ref(0)
   const myNormalQuizList = ref([
     {
       quizNo: 1,
@@ -49,6 +51,11 @@ export const useStateStore = defineStore('gameState', () => {
     },
   ])
 
+  const isUsedFirstBossHint = ref(false)
+  const isUsedSecondBossHint = ref(false)
+  const startDt = ref<Date>()
+  const endDt = ref<Date>()
+
   const changeState = (newState: gameState) => {
     gameState.value = newState
   }
@@ -64,6 +71,32 @@ export const useStateStore = defineStore('gameState', () => {
     currentQuizNo.value = quizNo + 1
   }
 
+  const useHint = () => {
+    usedBossHintCount.value++
+  }
+
+  const useFirstBossHint = () => {
+    isUsedFirstBossHint.value = true
+  }
+
+  const useSecondBossHint = () => {
+    isUsedSecondBossHint.value = true
+  }
+
+  const resetHint = () => {
+    isUsedFirstBossHint.value = false
+    isUsedSecondBossHint.value = false
+  }
+
+  const solvedBossQuiz = () => {
+    currentBossQuizNo.value++
+  }
+  const startGame = () => {
+    startDt.value = new Date()
+  }
+  const endGame = () => {
+    endDt.value = new Date()
+  }
   return { 
     gameState, 
     solvedNormalQuizCount, 
@@ -73,9 +106,22 @@ export const useStateStore = defineStore('gameState', () => {
     usedBossHintCount,
     myNormalQuizList, 
     currentQuizNo,
+    wholeBossQuizCount,
+    currentBossQuizNo,
+    isUsedFirstBossHint,
+    isUsedSecondBossHint,
+    startDt,
+    endDt,
     changeState, 
     changeCorrect,
-    normalQuizSolved
+    normalQuizSolved,
+    useHint,
+    useFirstBossHint,
+    useSecondBossHint,
+    resetHint,
+    solvedBossQuiz,
+    startGame,
+    endGame,
   }
 })
 

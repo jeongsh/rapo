@@ -182,7 +182,7 @@ const handleClickSubmitAnswer = () =>{
 .normal
   position: absolute
   width: 100%
-  max-width: 992px
+  max-width: 540px
   height: 100%
   margin: 0 auto
   top: 0

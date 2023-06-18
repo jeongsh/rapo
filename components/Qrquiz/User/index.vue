@@ -5,8 +5,9 @@
       height: vh + 'px',
     }"
   >
-    <opening v-if="gameState === 'opening'"></opening>
+    <loading v-if="gameState === 'opening'"></loading>
     <game v-else-if="gameState === 'playing'"></game>
+    <result v-else-if="gameState === 'complete'"></result>
   </div>
 </template>
 
@@ -19,8 +20,9 @@ import {
   useStateStore,
 } from '@/stores/qrquiz/gameState'
 
-import Opening from '@/components/Qrquiz/Opening/index.vue'
+import Loading from '@/components/Loading/index.vue'
 import Game from '~/components/Qrquiz/Game/index.vue'
+import Result from '~/components/Qrquiz/Result/index.vue'
 
 const stateStore = useStateStore()
 const {

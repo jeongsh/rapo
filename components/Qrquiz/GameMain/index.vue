@@ -21,7 +21,7 @@
             v-if="Math.floor(progress * 100) >= 50"
             class="box-message"
           >
-            <p class="message-enterable" style="text-align: center;">문이 열렸습니다. <br>클릭하여 추론문제에 입장해주세요</p>
+            <p class="message-enterable" style="text-align: center;" @click="props.openBossQuiz">문이 열렸습니다. <br>클릭하여 추론문제에 입장해주세요</p>
           </div>
         </transition>
       </div>
@@ -178,6 +178,7 @@ const {
 
 const props = defineProps<{
   openNormalQuiz: () => void
+  openBossQuiz: () => void
 }>()
 
 const isHelpOpen = ref(false)
@@ -313,6 +314,7 @@ const handleClickHideMySolvedQuizzes = () => {
     font-size: 16px
     font-weight: 500
     border-radius: 8px
+    cursor: pointer
 
 // header
 .body

@@ -1,21 +1,10 @@
 <template>
   <div class="wrap theme-5">
     <div
-      v-if="isLoading"
-      class="centered"
+      v-if="!isStarted"
+      class="intro"
     >
-      <div class="spinner">
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-        <div class="spinner-item"></div>
-      </div>
-
-      <p class="text">loading ...</p>
+      <button class="btn-push" @click="startGame">sdasdasd</button>
     </div>
     <user
       v-else
@@ -26,13 +15,17 @@
 
 <script setup lang="ts">
 import User from '@/components/Qrquiz/User/index.vue'
-const isLoading = ref(true)
+import { storeToRefs } from 'pinia';
+import { useStateStore } from '@/stores/qrquiz/gameState';
 
-onMounted(() => {
-  setTimeout(() => {
-    isLoading.value = false
-  }, 1500)
-})
+const stateStore = useStateStore()
+
+const isStarted = ref(false)
+
+const startGame =  () => {
+  stateStore.startGame()
+  isStarted.value = true
+}
 </script>
 
 <style lang="sass" scoped>
@@ -45,7 +38,7 @@ onMounted(() => {
   justify-content: center
   background: #F8F8F8
 
-  .centered
+  .intro
     display: flex
     flex-direction: column
     align-items: center
@@ -53,16 +46,8 @@ onMounted(() => {
     max-width: 540px
     width: 100%
     height: 100vh
-    // height: 100%
     background: #F8F8F8
-    // box-shadow: 0 0 10px #0006
     position: relative
-  .text
-    margin-top: 8px
-    color: $gray-5
-    font-size: 14px
-    font-weight: 500
-    text-transform: uppercase
 </style>
 
 <style lang="sass">
