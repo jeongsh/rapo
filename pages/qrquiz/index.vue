@@ -36,7 +36,7 @@ const startGame =  () => {
   display: flex
   align-items: center
   justify-content: center
-  background: #F8F8F8
+  background: yellow
 
   .intro
     display: flex
