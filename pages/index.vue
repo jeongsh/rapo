@@ -1,12 +1,13 @@
 <template>
-  <div>
-    dsadas
+  <div class="body">
+    <Main />
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import Main from '@/components/Main/index.vue'
+
 </script>
 
 <style lang="scss" scoped>
-
 </style>

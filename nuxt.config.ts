@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ko'
       },
-      title: 'RAPORAPO',
+      title: '뽑아주십쇼!',
       meta: [
         {
           charset: 'utf-8'
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: '현실과 가상 속에서의 라포를 형성시킬 수 있는 서비스. 온/오프라인 연계 기반의 게이미피케이션 서비스와 콘텐츠를 제공합니다.'
+          content: '안녕하세요 정상훈입니다... 제발 뽑아주세요...'
         },
       ],
     }
