@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
   ],
+  ssr: false,
+
+  // nitro: {
+  //   output: {
+  //     dir: '/raporapo/',
+  //     serverDir: '/raporapo/',
+  //     publicDir: '/raporapo/'
+  //   }
+  // },
   css: [
     '~/assets/css/esamanru.css',
     '~/assets/css/pretendard.css',
@@ -13,6 +22,7 @@ export default defineNuxtConfig({
     '~/assets/sass/common.sass',
   ],
   app:{
+    baseURL: '/rapo/',
     head: {
       htmlAttrs: {
         lang: 'ko'

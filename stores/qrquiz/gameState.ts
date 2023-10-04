@@ -24,7 +24,7 @@ export const useStateStore = defineStore('gameState', () => {
     {
       quizNo: 2,
       isSolved: false,
-      title: '정답은 꼬북꼬북입니다.',
+      title: '정답은 꼬북꼬북 입니다.',
       questionType: 'input',
       answer: '꼬북꼬북',
     },
@@ -97,14 +97,14 @@ export const useStateStore = defineStore('gameState', () => {
   const endGame = () => {
     endDt.value = new Date()
   }
-  return { 
-    gameState, 
-    solvedNormalQuizCount, 
+  return {
+    gameState,
+    solvedNormalQuizCount,
     wholeQuizCount,
     progress,
     earnedBossHintCount,
     usedBossHintCount,
-    myNormalQuizList, 
+    myNormalQuizList,
     currentQuizNo,
     wholeBossQuizCount,
     currentBossQuizNo,
@@ -112,7 +112,7 @@ export const useStateStore = defineStore('gameState', () => {
     isUsedSecondBossHint,
     startDt,
     endDt,
-    changeState, 
+    changeState,
     changeCorrect,
     normalQuizSolved,
     useHint,
