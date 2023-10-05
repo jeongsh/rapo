@@ -1,6 +1,7 @@
 const textScroll = () =>{
   const wrapTitles = document.querySelectorAll('.wrap-title')
-  
+  const innerCircle = document.querySelector('.circle.inner');
+  const outerCircle = document.querySelector('.circle.outer');
   wrapTitles.forEach((wrapTitle) => {
     let upSize = null
     let downSize = null
@@ -23,6 +24,8 @@ const textScroll = () =>{
           clearInterval(upSize)
         }
       }, 10)
+      innerCircle.classList.add('active');
+      outerCircle.classList.add('active');
     })
     wrapTitle.addEventListener('mouseleave', (e) => {
       clearInterval(upSize)
@@ -33,6 +36,8 @@ const textScroll = () =>{
           clearInterval(downSize)
         }
       }, 10)
+      innerCircle.classList.remove('active');
+      outerCircle.classList.remove('active');
     })
   })
 }

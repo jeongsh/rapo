@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="no-cursor">
     <div class="intro" v-if="false">
       <h1 class="title" v-for="a in titleArrr" :key="a">
         {{ a }}
@@ -34,12 +34,13 @@
       }"
     ></div>
   </div>
+  <Cursor />
 </template>
 
 <script setup lang="ts">
 import textScroll from '@/assets/js/TextScroll.js'
-
 import { PAGE_INFO } from '@/const/pageInfo'
+import Cursor from '~/components/common/Cursor.vue'
 
 onMounted(() => {
   const slider = document.querySelector('.slider')
@@ -78,11 +79,9 @@ const isScroll = ref(false)
 const isUpScroll = ref(false)
 const isDownScroll = ref(false)
 const currentSlide = ref(0)
-
 </script>
 
 <style lang="scss" scoped>
-
 .slider {
   width: 100vw;
   height: 100vh;
@@ -140,7 +139,6 @@ const currentSlide = ref(0)
     animation: downScroll 1.5s forwards;
   }
 }
-
 
 @keyframes upScroll {
   0% {
